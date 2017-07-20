@@ -174,7 +174,7 @@
             <Image Name="img36" Grid.Column="3" Grid.Row="6" />
             <Image Name="img66" Grid.Column="6" Grid.Row="6" />
         </Grid>
-		<Label Height="50"/>
+        <Label Height="50"/>
         <Grid Height="200">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -190,8 +190,8 @@
             </Grid.RowDefinitions>
             <Label Name="lblPlayer" FontSize="28" Grid.Column="0" Grid.Row="0"/>
             <Label Name="lblTime" FontSize="28" Grid.Column="3" Grid.Row="3"/>
-			<Label Name="lblSteine" FontSize="28" Grid.Column="1" Grid.Row="0"/>
-			<Label Name="lblPhase" FontSize="28" Grid.Column="3" Grid.Row="2"/>
+            <Label Name="lblSteine" FontSize="28" Grid.Column="1" Grid.Row="0"/>
+            <Label Name="lblPhase" FontSize="28" Grid.Column="3" Grid.Row="2"/>
             <Label Name="lblStatus" FontSize="28" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"/>
             <Label Name="lblStatusZusatz" FontSize="28" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"/>
         </Grid>
