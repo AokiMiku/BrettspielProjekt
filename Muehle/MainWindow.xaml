@@ -1,0 +1,199 @@
+﻿<Window x:Name="window" x:Class="Muehle.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Muehle" Height="800" Width="800" MinWidth="800" MinHeight="800" Initialized="window_Initialized" Loaded="window_Loaded" KeyDown="window_KeyDown">
+
+    <Window.Resources>
+        <ControlTemplate x:Key="RundesTemplate">
+            <Grid>
+                <Ellipse x:Name="AussenKreis" Width="25" Height="25" Fill="Brown" />
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="HorizontaleLinie">
+            <Grid>
+                <Rectangle x:Name="Line" Height="8" HorizontalAlignment="Stretch" Fill="Brown"/>
+            </Grid>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="VertikaleLinie">
+            <Grid>
+                <Rectangle x:Name="Line" Width="8" VerticalAlignment="Stretch" Fill="Brown"/>
+            </Grid>
+        </ControlTemplate>
+    </Window.Resources>
+    <StackPanel>
+        <Grid x:Name="grid" Width="{Binding RelativeSource={RelativeSource Self}, Path=ActualHeight}" MinWidth="500" MinHeight="500" Height="500" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!-- Eckpunkte -->
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="0" Grid.Row="0"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="3" Grid.Row="0"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="6" Grid.Row="0"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="1" Grid.Row="1"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="3" Grid.Row="1"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="5" Grid.Row="1"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="2" Grid.Row="2"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="3" Grid.Row="2"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="4" Grid.Row="2"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="0" Grid.Row="3"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="1" Grid.Row="3"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="2" Grid.Row="3"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="4" Grid.Row="3"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="5" Grid.Row="3"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="6" Grid.Row="3"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="2" Grid.Row="4"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="3" Grid.Row="4"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="4" Grid.Row="4"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="1" Grid.Row="5"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="3" Grid.Row="5"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="5" Grid.Row="5"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="0" Grid.Row="6"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="3" Grid.Row="6"/>
+            <Label Template="{StaticResource RundesTemplate}" Grid.Column="6" Grid.Row="6"/>
+
+
+            <!-- Horizontale Linien -->
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="1" Grid.Row="0" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="2" Grid.Row="0" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="3" Grid.Row="0" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="4" Grid.Row="0" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="5" Grid.Row="0" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="2" Grid.Row="1" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="3" Grid.Row="1" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="4" Grid.Row="1" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="3" Grid.Row="2" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="1" Grid.Row="3" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="5" Grid.Row="3" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="3" Grid.Row="4" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="2" Grid.Row="5" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="3" Grid.Row="5" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="4" Grid.Row="5" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="1" Grid.Row="6" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="2" Grid.Row="6" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="3" Grid.Row="6" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="4" Grid.Row="6" />
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="5" Grid.Row="6" />
+            <!-- Vertikale Linien -->
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="0" Grid.Row="1" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="0" Grid.Row="2" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="0" Grid.Row="3" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="0" Grid.Row="4" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="0" Grid.Row="5" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="1" Grid.Row="2" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="1" Grid.Row="3" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="1" Grid.Row="4" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="2" Grid.Row="3" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="3" Grid.Row="1" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="3" Grid.Row="5" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="4" Grid.Row="3" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="5" Grid.Row="2" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="5" Grid.Row="3" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="5" Grid.Row="4" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="6" Grid.Row="1" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="6" Grid.Row="2" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="6" Grid.Row="3" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="6" Grid.Row="4" />
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="6" Grid.Row="5" />
+            <!-- Linien für äußere Ecken-->
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Width="30"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="0" Grid.Row="0" Height="30" VerticalAlignment="Bottom"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="3" Grid.Row="0" Height="30" VerticalAlignment="Bottom"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="6" Grid.Row="0" Width="30" HorizontalAlignment="Left"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="6" Grid.Row="0" Height="30" VerticalAlignment="Bottom"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="6" Grid.Row="3" Width="30" HorizontalAlignment="Left"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="6" Grid.Row="6" Width="30" HorizontalAlignment="Left"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="6" Grid.Row="6" Height="30" VerticalAlignment="Top"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="3" Grid.Row="6" Height="30" VerticalAlignment="Top"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="0" Grid.Row="6" Width="30" HorizontalAlignment="Right"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="0" Grid.Row="6" Height="30" VerticalAlignment="Top"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="0" Grid.Row="3" Width="30" HorizontalAlignment="Right"/>
+            <!-- Linien für mittlere Ecken-->
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="1" Grid.Row="1" Width="30" HorizontalAlignment="Right"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="1" Grid.Row="1" Height="30" VerticalAlignment="Bottom"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="5" Grid.Row="1" Width="30" HorizontalAlignment="Left"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="5" Grid.Row="1" Height="30" VerticalAlignment="Bottom"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="5" Grid.Row="5" Width="30" HorizontalAlignment="Left"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="5" Grid.Row="5" Height="30" VerticalAlignment="Top"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="1" Grid.Row="5" Width="30" HorizontalAlignment="Right"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="1" Grid.Row="5" Height="30" VerticalAlignment="Top"/>
+            <!-- Linien für innere Ecken-->
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="2" Grid.Row="2" Width="30" HorizontalAlignment="Right"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="2" Grid.Row="2" Height="30" VerticalAlignment="Bottom"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="3" Grid.Row="2" Height="30" VerticalAlignment="Top"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="4" Grid.Row="2" Width="30" HorizontalAlignment="Left"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="4" Grid.Row="2" Height="30" VerticalAlignment="Bottom"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="4" Grid.Row="3" Width="30" HorizontalAlignment="Right"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="4" Grid.Row="4" Width="30" HorizontalAlignment="Left"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="4" Grid.Row="4" Height="30" VerticalAlignment="Top"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="3" Grid.Row="4" Height="30" VerticalAlignment="Bottom"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="2" Grid.Row="4" Width="30" HorizontalAlignment="Right"/>
+            <Label Template="{StaticResource VertikaleLinie}" Grid.Column="2" Grid.Row="4" Height="30" VerticalAlignment="Top"/>
+            <Label Template="{StaticResource HorizontaleLinie}" Grid.Column="2" Grid.Row="3" Width="30" HorizontalAlignment="Left"/>
+
+            <!-- ImageControls für Spielsteine-->
+            <Image Name="img00" Grid.Column="0" Grid.Row="0" />
+            <Image Name="img30" Grid.Column="3" Grid.Row="0" />
+            <Image Name="img60" Grid.Column="6" Grid.Row="0" />
+            <Image Name="img11" Grid.Column="1" Grid.Row="1" />
+            <Image Name="img31" Grid.Column="3" Grid.Row="1" />
+            <Image Name="img51" Grid.Column="5" Grid.Row="1" />
+            <Image Name="img22" Grid.Column="2" Grid.Row="2" />
+            <Image Name="img32" Grid.Column="3" Grid.Row="2" />
+            <Image Name="img42" Grid.Column="4" Grid.Row="2" />
+            <Image Name="img03" Grid.Column="0" Grid.Row="3" />
+            <Image Name="img13" Grid.Column="1" Grid.Row="3" />
+            <Image Name="img23" Grid.Column="2" Grid.Row="3" />
+            <Image Name="img43" Grid.Column="4" Grid.Row="3" />
+            <Image Name="img53" Grid.Column="5" Grid.Row="3" />
+            <Image Name="img63" Grid.Column="6" Grid.Row="3" />
+            <Image Name="img24" Grid.Column="2" Grid.Row="4" />
+            <Image Name="img34" Grid.Column="3" Grid.Row="4" />
+            <Image Name="img44" Grid.Column="4" Grid.Row="4" />
+            <Image Name="img15" Grid.Column="1" Grid.Row="5" />
+            <Image Name="img35" Grid.Column="3" Grid.Row="5" />
+            <Image Name="img55" Grid.Column="5" Grid.Row="5" />
+            <Image Name="img06" Grid.Column="0" Grid.Row="6" />
+            <Image Name="img36" Grid.Column="3" Grid.Row="6" />
+            <Image Name="img66" Grid.Column="6" Grid.Row="6" />
+        </Grid>
+		<Label Height="50"/>
+        <Grid Height="200">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Name="lblPlayer" FontSize="28" Grid.Column="0" Grid.Row="0"/>
+            <Label Name="lblTime" FontSize="28" Grid.Column="3" Grid.Row="3"/>
+			<Label Name="lblSteine" FontSize="28" Grid.Column="1" Grid.Row="0"/>
+			<Label Name="lblPhase" FontSize="28" Grid.Column="3" Grid.Row="2"/>
+            <Label Name="lblStatus" FontSize="28" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"/>
+            <Label Name="lblStatusZusatz" FontSize="28" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"/>
+        </Grid>
+    </StackPanel>
+</Window>
