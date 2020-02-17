@@ -16,7 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BrettspielCore;
 
-namespace Muehle
+namespace DigiBrett
 {
 	/// <summary>
 	/// Interaktionslogik für MainWindow.xaml

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Muehle.Properties
+namespace DigiBrett.Properties
 {
 
 
